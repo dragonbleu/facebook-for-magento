@@ -264,8 +264,7 @@ class FBProductFeed {
       $this->buildProductAttr(self::ATTR_GOOGLE_PRODUCT_CATEGORY,
         $product->getData('google_product_category'));
 
-    $gender = $this->getGenderInformation($product->getData('gender'));
-    $items[self::ATTR_GENDER] = $this->buildProductAttr(self::ATTR_GENDER, $gender);
+    $items[self::ATTR_GENDER] = $this->buildProductAttr(self::ATTR_GENDER, null); // Send back null as Gender
 
     return $items;
   }
